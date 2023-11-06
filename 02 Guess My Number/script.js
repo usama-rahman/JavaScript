@@ -1,15 +1,24 @@
 'use strict';
-
+let currentScore = 20;
 const randomNumber = Math.floor(Math.random() * 20 + 1);
-const guess = document.querySelector('.guess');
 const check = document.querySelector('.check');
+const number = document.querySelector('.number').textContent;
+console.log(number);
+number.textContent = randomNumber;
+let score = document.querySelector('.score');
 console.log(randomNumber);
-console.log(guess.value);
+
 check.addEventListener('click', function () {
-  if (guess === randomNumber) {
-    console.log('win');
+  const guess = Number(document.querySelector('.guess').value);
+  let a = parseInt((score.innerHTML = currentScore));
+  --currentScore;
+
+  // console.log(currentScore);
+
+  if (randomNumber === guess) {
+    // console.log('Win');
+    document.body.style.backgroundColor = 'green';
   } else {
-    console.log('over');
+    // console.log('try again');
   }
 });
-// Working

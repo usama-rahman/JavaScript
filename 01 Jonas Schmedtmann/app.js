@@ -1,3 +1,3 @@
 'use strict';
 
-const x = 23;
+const x = [1, 2, 3];
