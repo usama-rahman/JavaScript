@@ -10,7 +10,7 @@
 
 - [The Nullish Coalescing Operator](#the-nullish-coalescing-operator) `??`
 
-- [Coding Challenge #1](#coding-challenge-1)
+- [Coding Challenge](#coding-challenge-1) `#1`
 
 - [Logical Assignment Operators](#logical-assignment-operators) `||=` and `??=`
 
@@ -22,7 +22,7 @@
 
 - [Looping Objects Object](#looping-objects-object-keys-values-and-entries) `Keys`, `Values`, and `Entries`
 
-- [Coding Challenge #2](#coding-challenge-2)
+- [Coding Challenge](#coding-challenge-2) `#2`
 
 - [Sets](#sets) `Set`
 
@@ -30,9 +30,9 @@
 
 - [Maps Iteration](#maps-iteration) `Map`
 
-- [Coding Challenge](coding-challenge-3)`#3`
+- [Coding Challenge](#coding-challenge-3) `#3`
 
-- [Working With Strings]()
+- [Working With](#working-with-strings) `Strings`
 
 ---
 
@@ -41,7 +41,7 @@
 #### Part - 1
 
 ```js
-const airline = 'Bangladesh Biman';
+const airline = 'Bangladesh Biman BB';
 const plane = 'A726';
 
 console.log(plane[0]);
@@ -52,9 +52,10 @@ console.log('B737'[0]);
 console.log(airline.length);
 console.log('B737'.length);
 
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('portugal'));
+console.log(airline.indexOf('n'));
+console.log(airline.lastIndexOf('n'));
+console.log(airline.indexOf('Biman'));
+console.log(airline.indexOf('biman'));
 
 console.log(airline.slice(4));
 console.log(airline.slice(4, 7));
@@ -68,7 +69,7 @@ console.log(airline.slice(1, -1));
 const checkMiddleSeat = function (seat) {
   // B and E are middle seats
   const s = seat.slice(-1);
-  if (s === 'B' || s === 'E') console.log('You got the middle seat 😬');
+  if (s === 'B' || s === 'E') console.log('You got the middle seat');
   else console.log('You got lucky');
 };
 
@@ -76,10 +77,10 @@ checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
 
-console.log(new String('jonas'));
-console.log(typeof new String('jonas'));
+console.log(new String('usama'));
+console.log(typeof new String('usama'));
 
-console.log(typeof new String('jonas').slice(1));
+console.log(typeof new String('usama').slice(-1));
 ```
 
 #### Part - 2
