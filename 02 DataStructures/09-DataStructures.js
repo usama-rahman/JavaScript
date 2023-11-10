@@ -16,6 +16,7 @@
 // Looping Objects Object Keys, Values, and Entries
 // Coding Challenge #2
 // Sets
+
 // Maps Fundamentals
 // Maps Iteration
 
@@ -46,6 +47,49 @@ const restaurant = {
   //  ES6 Enhanced Object Literals
   openingHours,
 };
+
+////////////////////////////////////////
+
+// Sets
+/*
+const ordersSet = new Set([
+  'pasta',
+  'pizza',
+  'pasta',
+  'soup',
+  'pizza',
+  'pasta',
+  'pizza',
+]);
+
+console.log(ordersSet);
+console.log(new Set('usama'));
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('pizza'));
+console.log(ordersSet.has('bread'));
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+ordersSet.delete('soup');
+// ordersSet.clear();
+console.log(ordersSet);
+
+// Set has no indexes
+console.log(ordersSet[2]); // undefined
+
+for (const order of ordersSet) {
+  console.log(order);
+}
+
+// Set --> new Unique Array
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+const uniqueStaff = [...new Set(staff)];
+console.log(uniqueStaff);
+
+console.log(new Set(staff).size);
+*/
 
 ////////////////////////////////////////
 
