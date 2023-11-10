@@ -42,9 +42,9 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  // openingHours: openingHours,
+  // openingHours: openingHours, // Old Methode
   //  ES6 Enhanced Object Literals
-  openingHours,
+  openingHours, // ES6
 };
 
 ////////////////////////////////////////

@@ -16,11 +16,11 @@
 
 - Looping Arrays The for-of Loop
 
-- Enhanced Object Literals
+- [Enhanced Object Literals]()
 
 - Optional Chaining `.?`
 
-- [Looping Objects Object `Keys`, `Values`, and `Entries`](#looping-objects-object-keys-values-and-entries)
+- [Looping Objects Object](#looping-objects-object-keys-values-and-entries) `Keys`, `Values`, and `Entries`
 
 - [Coding Challenge #2](#coding-challenge-2)
 
@@ -109,6 +109,40 @@ const entries = Object.entries(openingHours);
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+```
+
+---
+
+## Enhanced Object Literals
+
+```js
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+let openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[5]]: {
+    open: 1, // Open 23 hours
+    close: 24,
+  },
+};
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  // openingHours: openingHours, // Old Methode
+  //  ES6 Enhanced Object Literals
+  openingHours, // ES6
+};
 ```
 
 ---
