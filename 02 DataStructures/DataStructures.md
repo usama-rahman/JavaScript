@@ -16,7 +16,7 @@
 
 - Looping Arrays The for-of Loop
 
-- [Enhanced Object Literals]()
+- [Enhanced Object Literals](#enhanced-object-literals)
 
 - Optional Chaining `.?`
 
@@ -26,13 +26,53 @@
 
 - [Sets](#sets) `Set`
 
-- [Maps Fundamentals]() `Map`
+- [Maps]() `Map`
 
-- [Maps Iteration]() `Map`
+<!-- - [Maps Iteration]() `Map` -->
 
 ---
 
-## Maps Fundamentals
+## Maps
+
+##### Mapping an array of numbers to an array of square roots
+
+```js
+const numbers = [1, 4, 9];
+const roots = numbers.map((num) => Math.sqrt(num));
+
+// roots is now     [1, 2, 3]
+// numbers is still [1, 4, 9]
+```
+
+##### Using map to reformat objects in an array
+
+```js
+const kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
+
+const reformattedArray = kvArray.map(({ key, value }) => ({ [key]: value }));
+
+console.log(reformattedArray); // [{ 1: 10 }, { 2: 20 }, { 3: 30 }]
+console.log(kvArray);
+// [
+//   { key: 1, value: 10 },
+//   { key: 2, value: 20 },
+//   { key: 3, value: 30 }
+// ]
+```
+
+##### Mapping an array of numbers using a function containing an argument
+
+```js
+const numbers = [1, 4, 9];
+const doubles = numbers.map((num) => num * 2);
+
+console.log(doubles); // [2, 8, 18]
+console.log(numbers); // [1, 4, 9]
+```
 
 ---
 

@@ -49,7 +49,33 @@ const restaurant = {
 
 ////////////////////////////////////////
 
-// Maps Fundamentals
+// Maps Iteration
+
+const question = new Map([
+  ['question', 'What is the best Programing language'],
+  [1, 'C'],
+  [2, 'C++'],
+  [3, 'Python'],
+  [4, 'JavaScript'],
+  ['correct', 4],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
+
+// console.log(question);
+
+// Quize App
+
+console.log(question.get('question'));
+
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`${key}: ${value}`);
+}
+
+const answer = Number(prompt('Your Answer:'));
+// console.log(answer);
+
+console.log(question.get(question.get('correct') === answer));
 
 ////////////////////////////////////////
 
