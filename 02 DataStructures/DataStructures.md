@@ -12,7 +12,7 @@
 
 - [Coding Challenge #1](#coding-challenge-1)
 
-- [Logical Assignment Operators](#logical-assignment-operators)
+- [Logical Assignment Operators](#logical-assignment-operators) `||=` and `??=`
 
 - Looping Arrays The for-of Loop
 
@@ -24,11 +24,15 @@
 
 - [Coding Challenge #2](#coding-challenge-2)
 
-- [Sets]()
+- [Sets](#sets) `Set`
 
-- [Maps Fundamentals]()
+- [Maps Fundamentals]() `Map`
 
-- [Maps Iteration]()
+- [Maps Iteration]() `Map`
+
+---
+
+## Maps Fundamentals
 
 ---
 

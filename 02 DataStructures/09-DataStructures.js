@@ -16,7 +16,6 @@
 // Looping Objects Object Keys, Values, and Entries
 // Coding Challenge #2
 // Sets
-
 // Maps Fundamentals
 // Maps Iteration
 
@@ -47,6 +46,10 @@ const restaurant = {
   //  ES6 Enhanced Object Literals
   openingHours,
 };
+
+////////////////////////////////////////
+
+// Maps Fundamentals
 
 ////////////////////////////////////////
 
