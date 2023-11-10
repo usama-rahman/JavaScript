@@ -14,6 +14,8 @@
 // Enhanced Object Literals
 // Optional Chaining (.?)
 // Looping Objects Object Keys, Values, and Entries
+// Coding Challenge #2
+
 // Code
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
@@ -43,13 +45,46 @@ const restaurant = {
   //  ES6 Enhanced Object Literals
   openingHours,
 };
+////////////////////////////////////////
+
+// Looping Objects Object Keys, Values, and Entries
+
+//  Property Name/ Keys
+
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} Days: `;
+
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+// Property values
+
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entries Object
+
+const entries = Object.entries(openingHours);
+
+// [key, Value]
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+
+////////////////////////////////////////
 
 // Optional Chaining (?.)
+
 /*
 if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
+console.log(restaurant.openingHours.mon.open);
 
-  // With Optional Chaining (?)
+// With Optional Chaining (?)
 
   console.log(restaurant.openingHours.mon?.open);
 
@@ -58,7 +93,7 @@ for (const day of weekdays) {
   console.log(`On ${day}, open at ${open}`);
 }
 */
-///////////////////////////////////////
+////////////////////////////////////////
 
 // The for-of Loop
 
