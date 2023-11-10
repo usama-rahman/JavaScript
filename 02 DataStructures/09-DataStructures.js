@@ -12,7 +12,8 @@
 // Coding Challenge #1
 // Looping Arrays The for-of Loop
 // Enhanced Object Literals
-
+// Optional Chaining (.?)
+// Looping Objects Object Keys, Values, and Entries
 // Code
 
 const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
@@ -27,7 +28,7 @@ let openingHours = {
     close: 23,
   },
   [weekdays[5]]: {
-    open: 0, // Open 24 hours
+    open: 1, // Open 23 hours
     close: 24,
   },
 };
@@ -43,7 +44,20 @@ const restaurant = {
   openingHours,
 };
 
-console.log(restaurant);
+// Optional Chaining (?.)
+/*
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+  // With Optional Chaining (?)
+
+  console.log(restaurant.openingHours.mon?.open);
+
+for (const day of weekdays) {
+  const open = restaurant.openingHours[day]?.open || 'closed';
+  console.log(`On ${day}, open at ${open}`);
+}
+*/
 ///////////////////////////////////////
 
 // The for-of Loop
