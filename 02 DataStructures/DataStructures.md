@@ -34,7 +34,7 @@
 
 - [Working With](#working-with-strings) `Strings`
 
-- [Coding Challenge]() `#4`
+- [Coding Challenge](#coding-challenge-4) `#4`
 
 ---
 
@@ -347,7 +347,74 @@ console.log(new Set(staff).size);
 
 ---
 
+## Optional Chaining`.?`
+
+```js
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+let openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[5]]: {
+    open: 1, // Open 23 hours
+    close: 24,
+  },
+};
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  openingHours,
+};
+```
+
+```js
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// With Optional Chaining (?)
+
+console.log(restaurant.openingHours.mon?.open);
+
+for (const day of weekdays) {
+  const open = restaurant.openingHours[day]?.open || 'closed';
+  console.log(`On ${day}, open at ${open}`);
+}
+```
+
+---
+
 ## Looping Objects Object `Keys`, `Values`, and `Entries`
+
+```js
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+let openingHours = {
+  [weekdays[3]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[4]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[5]]: {
+    open: 1, // Open 23 hours
+    close: 24,
+  },
+};
+```
+
+### Keys `key`
 
 ```js
 //  Property Name / Keys
@@ -361,12 +428,20 @@ for (const day of properties) {
   openStr += `${day}, `;
 }
 console.log(openStr);
+```
 
+### Values `Value`
+
+```js
 // Property values
 
 const values = Object.values(openingHours);
 console.log(values);
+```
 
+### Entries `Entries`
+
+```js
 // Entries Object
 
 const entries = Object.entries(openingHours);
