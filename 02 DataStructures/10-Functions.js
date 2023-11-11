@@ -13,6 +13,7 @@
 // The bind Method
 
 ////////////////////////////////////////
+
 ////////////////////////////////////////
 ////////////////////////////////////////
 
@@ -21,6 +22,34 @@
 ////////////////////////////////////////
 
 // The call and apply Methods
+
+const bimanBangladesh = {
+  airline: 'Biman Bangladesh',
+  iataCode: 'BH',
+  bookings: [],
+  // book: function() {}
+  book(flightNumber, passengerName) {
+    console.log(
+      `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`
+    );
+  },
+};
+
+bimanBangladesh.book(323, 'Usama Rahman');
+bimanBangladesh.book(946, 'AR Khan');
+
+const usBangla = {
+  airline: 'US Bangla',
+  iataCode: 'NS',
+  bookings: [],
+};
+
+const book = usBangla.book;
+
+//  Call Methode
+
+book.call(usBangla, 32, 'Ratul Royyy');
+console.log(usBangla);
 
 ////////////////////////////////////////
 
