@@ -18,7 +18,7 @@
 
 - [Enhanced Object Literals](#enhanced-object-literals)
 
-- [Optional Chaining](optional-chaining)`.?`
+- [Optional Chaining](#optional-chaining)`.?`
 
 - [Looping Objects Object](#looping-objects-object-keys-values-and-entries) `Keys`, `Values`, and `Entries`
 
