@@ -10,7 +10,15 @@
 
 - [Functions Returning Functions](#functions-returning-functions)
 
-- [The `call` and `apply` Methods]()
+- [The `call` and `apply` Methods](#call-and-apply)
+
+- [The `bind` Method]()
+
+- [Coding Challenge]()`#1`
+
+---
+
+## `bind` Method
 
 ---
 
@@ -142,3 +150,9 @@ createBooking('A759', 5, 600);
 createBooking('A759', 10);
 createBooking('A759', undefined, 7);
 ```
+
+---
+
+## Coding Challenge #1
+
+---
