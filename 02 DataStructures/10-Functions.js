@@ -23,6 +23,7 @@
 
 // The call and apply Methods
 
+/*
 const bimanBangladesh = {
   airline: 'Biman Bangladesh',
   iataCode: 'BH',
@@ -32,6 +33,10 @@ const bimanBangladesh = {
     console.log(
       `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`
     );
+    this.bookings.push({
+      flight: `${this.iataCode}${flightNumber}`,
+      passengerName,
+    });
   },
 };
 
@@ -44,12 +49,32 @@ const usBangla = {
   bookings: [],
 };
 
-const book = usBangla.book;
+const book = bimanBangladesh.book;
 
 //  Call Methode
 
-book.call(usBangla, 32, 'Ratul Royyy');
+book.call(usBangla, 325, 'Ratul Royyy');
 console.log(usBangla);
+
+book.call(bimanBangladesh, 563, 'Boltu Sontu');
+console.log(bimanBangladesh);
+
+const novoAir = {
+  airline: 'Novo Air',
+  iataCode: 'LA',
+  bookings: [],
+};
+
+book.call(novoAir, 657, 'Chandu Funtu');
+
+// Apply methode
+
+const flightData = [583, 'George Cooper'];
+book.apply(novoAir, flightData);
+console.log(novoAir);
+
+book.call(novoAir, ...flightData);
+*/
 
 ////////////////////////////////////////
 

@@ -25,54 +25,56 @@
 ## `call` and `apply`
 
 ```js
-const lufthansa = {
-  airline: 'Lufthansa',
-  iataCode: 'LH',
+const bimanBangladesh = {
+  airline: 'Biman Bangladesh',
+  iataCode: 'BH',
   bookings: [],
   // book: function() {}
-  book(flightNum, name) {
+  book(flightNumber, passengerName) {
     console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+      `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`
     );
-    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+    this.bookings.push({
+      flight: `${this.iataCode}${flightNumber}`,
+      passengerName,
+    });
   },
 };
 
-lufthansa.book(239, 'Jonas Schmedtmann');
-lufthansa.book(635, 'John Smith');
+bimanBangladesh.book(323, 'Usama Rahman');
+bimanBangladesh.book(946, 'AR Khan');
 
-const eurowings = {
-  airline: 'Eurowings',
-  iataCode: 'EW',
+const usBangla = {
+  airline: 'US Bangla',
+  iataCode: 'NS',
   bookings: [],
 };
 
-const book = lufthansa.book;
+const book = bimanBangladesh.book;
 
-// Does NOT work
-// book(23, 'Sarah Williams');
+//  Call Methode
 
-// Call method
-book.call(eurowings, 23, 'Sarah Williams');
-console.log(eurowings);
+book.call(usBangla, 325, 'Ratul Royyy');
+console.log(usBangla);
 
-book.call(lufthansa, 239, 'Mary Cooper');
-console.log(lufthansa);
+book.call(bimanBangladesh, 563, 'Boltu Sontu');
+console.log(bimanBangladesh);
 
-const swiss = {
-  airline: 'Swiss Air Lines',
-  iataCode: 'LX',
+const novoAir = {
+  airline: 'Novo Air',
+  iataCode: 'LA',
   bookings: [],
 };
 
-book.call(swiss, 583, 'Mary Cooper');
+book.call(novoAir, 657, 'Chandu Funtu');
 
-// Apply method
+// Apply methode
+
 const flightData = [583, 'George Cooper'];
-book.apply(swiss, flightData);
-console.log(swiss);
+book.apply(novoAir, flightData);
+console.log(novoAir);
 
-book.call(swiss, ...flightData);
+book.call(novoAir, ...flightData);
 ```
 
 ---
