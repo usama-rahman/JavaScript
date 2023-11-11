@@ -6,7 +6,34 @@
 
 - [How Passing Arguments Works Value vs. Reference](#how-passing-arguments-works-value-vs-reference)
 
-- [Functions Accepting Callback Functions]()
+- [Functions Accepting Callback Functions](#callback-functions)
+
+- [Functions Returning Functions]()
+
+---
+
+## Functions Returning Functions
+
+```js
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+
+greeterHey('Usama');
+greeterHey('Rahman');
+
+greet('Hello')('Usama');
+
+// With Array Function
+
+const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Usama');
+```
 
 ---
 
@@ -19,10 +46,12 @@ const oneWord = function (str) {
 
 const upperFirstWord = function (str) {
   const [first, ...others] = str.split(' ');
+
   return [first.toUpperCase(), ...others].join(' ');
 };
 
 // Higher-order function
+
 const transformer = function (str, fn) {
   console.log(`Original string: ${str}`);
   console.log(`Transformed string: ${fn(str)}`);
@@ -34,10 +63,13 @@ transformer('JavaScript is the best!', upperFirstWord);
 transformer('JavaScript is the best!', oneWord);
 
 // JS uses callbacks all the time
+
 const high5 = function () {
   console.log('👋');
 };
+
 document.body.addEventListener('click', high5);
+
 ['Usama', 'Rahman', 'khan'].forEach(high5);
 ```
 

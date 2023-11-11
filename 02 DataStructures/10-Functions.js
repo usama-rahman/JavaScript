@@ -8,8 +8,32 @@
 // How Passing Arguments Works Value vs. Reference
 // First-Class and Higher-Order Functions
 // Functions Accepting Callback Functions
+// Functions Returning Functions
 
 ////////////////////////////////////////
+
+// Functions Returning Functions
+
+/*
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+
+greeterHey('Usama');
+greeterHey('Rahman');
+
+greet('Hello')('Usama');
+
+// With Array Function
+
+const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Usama');
+*/
 
 ////////////////////////////////////////
 
