@@ -8,7 +8,13 @@
 
 - [Functions Accepting Callback Functions](#callback-functions)
 
-- [Functions Returning Functions]()
+- [Functions Returning Functions](#functions-returning-functions)
+
+- [The `call` and `apply` Methods]()
+
+---
+
+## `call` and `apply`
 
 ---
 
