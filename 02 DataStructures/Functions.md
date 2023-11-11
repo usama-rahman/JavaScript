@@ -4,7 +4,42 @@
 
 - [Default Parameters](#default-parameters)
 
-- [How Passing Arguments Works]()Value vs. Reference
+- [How Passing Arguments Works Value vs. Reference](#how-passing-arguments-works-value-vs-reference)
+
+- [Functions Accepting Callback Functions]()
+
+---
+
+## Callback Functions
+
+```js
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
+
+// Higher-order function
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
+};
+
+transformer('JavaScript is the best!', upperFirstWord);
+transformer('JavaScript is the best!', oneWord);
+
+// JS uses callbacks all the time
+const high5 = function () {
+  console.log('👋');
+};
+document.body.addEventListener('click', high5);
+['Usama', 'Rahman', 'khan'].forEach(high5);
+```
 
 ---
 
