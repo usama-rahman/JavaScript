@@ -16,7 +16,23 @@
 
 - [Coding Challenge](#coding-challenge-1)`#1`
 
+- [Immediately Invoked Function Expressions]()`IIFE`
+
 ---
+
+## IIFE
+
+```js
+(function () {
+  console.log('This will never run again');
+})();
+
+//  () => {}
+
+(() => {
+  console.log('This will ALSO never run again');
+})();
+```
 
 ---
 

@@ -11,15 +11,31 @@
 // Functions Returning Functions
 // The call and apply Methods
 // The bind Method
+// Immediately Invoked Function Expressions (IIFE)
 
 ////////////////////////////////////////
 
 ////////////////////////////////////////
+
+// Immediately Invoked Function Expressions (IIFE)
+
+// IFIE
+
+(function () {
+  console.log('This will never run again');
+})();
+
+//  () => {}
+
+(() => {
+  console.log('This will ALSO never run again');
+})();
 
 ////////////////////////////////////////
 
 // The call and apply Methods
 
+/*
 const bimanBangladesh = {
   airline: 'Biman Bangladesh',
   iataCode: 'BH',
@@ -70,11 +86,13 @@ book.apply(novoAir, flightData);
 // console.log(novoAir);
 
 book.call(novoAir, ...flightData);
+*/
 
 ////////////////////////////////////////
 
 // The bind Method
 
+/*
 const bookNA = book.bind(novoAir);
 const bookUSB = book.bind(usBangla);
 const bookBB = book.bind(bimanBangladesh);
@@ -103,6 +121,7 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
+*/
 
 ////////////////////////////////////////
 
