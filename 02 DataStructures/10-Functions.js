@@ -29,9 +29,9 @@ const bimanBangladesh = {
   bookings: [],
   // book: function() {}
   book(flightNumber, passengerName) {
-    // console.log(
-    //   `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`
-    // );
+    console.log(
+      `${passengerName} booked a seat on ${this.airline} flight ${this.iataCode}${flightNumber}`
+    );
     this.bookings.push({
       flight: `${this.iataCode}${flightNumber}`,
       passengerName,
@@ -77,6 +77,16 @@ book.call(novoAir, ...flightData);
 ////////////////////////////////////////
 
 // The bind Method
+
+const bookNA = book.bind(novoAir);
+const bookUSB = book.bind(usBangla);
+const bookBB = book.bind(bimanBangladesh);
+
+bookNA(44, 'afnan khan');
+
+const bookNA23 = book.bind(novoAir, 23);
+bookNA23('adnan');
+bookNA23('Martha');
 
 ////////////////////////////////////////
 
