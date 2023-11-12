@@ -12,8 +12,11 @@
 // The call and apply Methods
 // The bind Method
 // Immediately Invoked Function Expressions (IIFE)
+// Closures
 
 ////////////////////////////////////////
+
+// Closures
 
 ////////////////////////////////////////
 
@@ -21,6 +24,7 @@
 
 // IFIE
 
+/*
 (function () {
   console.log('This will never run again');
 })();
@@ -30,6 +34,7 @@
 (() => {
   console.log('This will ALSO never run again');
 })();
+*/
 
 ////////////////////////////////////////
 
