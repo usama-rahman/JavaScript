@@ -21,6 +21,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // The new at Method
 
+/*
 const arr = [43, 78, 22];
 
 console.log(arr[0]);
@@ -31,6 +32,7 @@ console.log(arr.at(0));
 console.log(arr[arr.length - 1]);
 console.log(arr.slice(-1)[0]);
 console.log(arr.at(-1));
+*/
 
 ////////////////////////////////////////
 

@@ -2,8 +2,8 @@
 
 ---
 
-- [Simple Array Methods]()
-- [The new at Method]() `.at`
+- [Simple Array Methods](#simple-array)
+- [The new at Method](#at-method) `.at`
 
 ---
 
